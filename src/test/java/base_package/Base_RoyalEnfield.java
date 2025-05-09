@@ -7,7 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-public class Base_RoyalEnfield {
+public class Base_RoyalEnfield 
+{
 	
 		public static WebDriver driver;
 		@BeforeTest
@@ -19,11 +20,11 @@ public class Base_RoyalEnfield {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		}
-//		@AfterTest
-//		public void teardown()
-//		{
-//			driver.quit();
-//		}
+		@AfterTest
+		public void teardown()
+		{
+			driver.quit();
+		}
 
 
 }
