@@ -9,7 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
-public class Re_productpage {
+public class Re_productpage 
+{
 
     WebDriver driver;
     WebDriverWait wait;
@@ -38,46 +39,39 @@ public class Re_productpage {
     @FindBy(xpath = "//*[@id=\"maincontent\"]/div[2]/div/div[4]/div[2]/div[6]/ul/li/button")
     WebElement checkout;
 
-    // Constructor to initialize elements and WebDriverWait
-    public Re_productpage(WebDriver driver) {
+    public Re_productpage(WebDriver driver) 
+    {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public void subclk() throws Exception {
-        // Type into the search field
+    public void subclk() throws Exception 
+    {
+        
         search.sendKeys("Riding jacket");
-
-        // Click the search button
         searchclk.click();
-
-        // Wait for the product link to be clickable and scroll to it
+        
         wait.until(ExpectedConditions.elementToBeClickable(product));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", product);
 
-        // Click the product using JavaScript
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", product);
 
-        // Wait for the size option to be clickable and then click it
         wait.until(ExpectedConditions.elementToBeClickable(size));
         size.click();
 
-        // Wait for the 'Add to Cart' button to be clickable and then click it
         wait.until(ExpectedConditions.elementToBeClickable(addtocart));
         addtocart.click();
 
-        // Wait for the cart icon to be clickable and click it
         wait.until(ExpectedConditions.elementToBeClickable(carticon));
         carticon.click();
     }
 
-    public void cart_click() throws InterruptedException {
-        // Wait for and click the minicart
+    public void cart_click() throws InterruptedException 
+    {
         wait.until(ExpectedConditions.elementToBeClickable(minicart));
         minicart.click();
 
-        // Wait for and click the checkout button
         wait.until(ExpectedConditions.elementToBeClickable(checkout));
         checkout.click();
     }
