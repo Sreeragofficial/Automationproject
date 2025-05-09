@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import base_package.Base_RoyalEnfield;
 import page_package.Checkoutpage;
 
-public class ReCheckout extends Base_RoyalEnfield {
+public class ReCheckout extends Base_RoyalEnfield 
+{
 	
 	
 	@Test
@@ -18,7 +19,7 @@ public class ReCheckout extends Base_RoyalEnfield {
 			ob.screenshot1();
 		}
 
-	}
+}
 
 
 
