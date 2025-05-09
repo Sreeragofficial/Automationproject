@@ -8,7 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class RE_createaccount {
+public class RE_createaccount 
+{
 	WebDriver driver;
 	@FindBy(xpath="//*[@id=\"desktop_wrapper\"]/div[3]/div[2]/header/div/ul/span[1]/li/a/span")WebElement logicon ;
 	@FindBy(xpath="//*[@id=\"customer-popup-login-form\"]/fieldset/div[6]/a")WebElement createaccount ;
